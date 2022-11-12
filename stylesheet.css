@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 100vh;
+}
+.header{
+    height: 100px;
+    width: 100vw;
+    background-color: rgba(74, 76, 184, 0.541);
+    display: flex;
+    justify-content: space-between;
+    
+}
+.logo{
+    height: 100%;
+    width: 20%;
+    background-color: red;
+    font-size: 30px;
+    color: white;
+}
+.otras-cosas{
+    height: 100%;
+    width: 80%;
+    background-color: rgb(38, 0, 255);
+    color: white;
+    font-size: 20px; 
+    text-align: center;
+}
+.footer{
+    height: 200px;
+    width: 100vw;
+    background-color: rgba(74, 76, 184, 0.541);
+    display: flex;
+    justify-content: space-around;
+}
+.seccion{
+    height: 100%;
+    width: 20%;
+    background-color: aqua;
+}
+.cuadro-moto{
+    height: 500px;
+    width: 1328px;
+    background-color: rgb(148, 222, 224);
+    position: relative;
+    overflow: hidden;
+    border-radius: 150px;
+}
+.calle{
+    position: absolute;
+    bottom: -10px;
+    height: 5vh;
+    width: 1400px;
+    background-color: rgb(151, 151, 151);
+    z-index: 10;
+}
+.moto{
+     transform: scaleX(-1); 
+    width: 200px;
+    position: absolute;
+    bottom: -40px;
+    left: 30%;
+    z-index: 20;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0));
+    
+}
+.nubes, .ciudad{
+    position: absolute;
+    background: url('./images/nubes.png');
+    height: 100%;
+    width: 100%;
+    animation: nubes-animacion 10s linear infinite;
+    z-index: 9;
+    
+}
+.ciudad{
+    background: url('./images/ciudad.png'); 
+    animation: nubes-animacion 5s linear infinite;
+}
+
+.botones{
+    height: 400px;
+    width: 300px;
+    z-index: 100;
+    position: absolute;
+    right: 150px;
+    top: 50px;
+    background-color: rgba(0, 0, 0, 0.39);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+    
+
+}
+
+.boton{
+    height: 14%;
+    border-radius: 6px;
+    border: none;
+    font-size: 25px;
+    background-color: rgb(62, 92, 146);
+    color: rgb(255, 255, 255);
+    border: 5px solid white;
+}
+.yt{
+    background-color: #c4302b;
+}
+.ig{
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+}
+.fc{
+    background-color: #4267B2;
+}
+.tw{
+    background-color: #1DA1F2;
+}
+.cf{
+    background-color: rgb(133, 133, 51);
+}
+@keyframes nubes-animacion {
+    0%{
+        background-position: 1328px;
+        
+    }
+    100%{
+        
+        background-position: 0px;
+    }
+    
+}
